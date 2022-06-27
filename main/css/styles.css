@@ -1,0 +1,275 @@
+*{
+    font-family: Microsoft JhengHei;
+}
+body, p, ul, h1 {
+    margin: 0;
+    padding: 0;
+}
+/* p,ul標籤有marign */
+.workframe {
+    color: #fff;
+    height: 75px;
+    z-index: 999;
+}
+.fixed {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    background-color: #000;
+    z-index: 998;
+}
+/* height:65px之後要改成變數 */
+.name {
+    width: 50%;
+    display: flex;
+}
+/* 設定行高使文字垂直置中 */
+.zh-name {
+    font-size: 24px;
+    line-height: 75px;
+    position: absolute;
+    left: 10%;
+}
+/* .en-name {
+    font-size: 16px;
+    padding-top: 2.3em;
+    padding-left: 1em;
+} */
+nav {
+    width: 50%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding-right: 40px;
+    text-align: center;
+}
+/* ul原本已經有left padding 
+text-align使字置中 需先有flex
+*/
+li {
+    list-style-type: none;
+    width: 25%;
+    height: 100%;
+    line-height: 75px;
+}
+a {
+    text-decoration: none;
+}
+nav li a {
+    color: #fff;
+    width: 100%;
+    display: inline-block;
+    font-size: 20px;
+    height: 100%;
+}
+/* a設定為inline-block 使其有寬度以填滿li區域
+鼠標在區塊內便會顯示為pointer
+*/
+nav ul li:hover {
+    background-color: #D0D0D0;
+}
+a:hover {
+    color: #000;
+}
+/* vh為視窗可見範圍 */
+.home {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(110deg, #4F4F4F 40%, transparent 40%)
+    center center / 100% 100%, url(../images/pexels-cottonbro-5483071.jpg)right center / auto 100%;
+}
+.home-page {
+    color: #fff;
+    font-size: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 60%;
+}
+.home-page div {
+    display: flex;
+    height: 120px;
+}
+.home-page div::after{
+    content: "";
+    border-bottom: #fff solid 3px;
+    height: 1px;
+    width: 370px;
+    z-index: 99;
+    position: relative;
+    top: calc(50% + 60px);
+    left: 8%;
+}
+.home-page div:last-child::after {
+    display: none;
+}
+.home-page i {
+    line-height: 120px;
+    position: absolute;
+    left: 8%;
+}
+.home-page p {
+    line-height: 120px;
+    position: absolute;
+    left: 15%;
+    width: fit-content;
+}
+/* fit-content使區塊框度等於文字長度 */
+.fa-fire {
+    color: #f99;
+}
+.fa-lightbulb {
+    color: #eda;
+}
+.fa-pen-square {
+    color: #2b8;
+}
+.about {
+    height: 100vh;
+    width: 100%;
+    background-color: #B3D9D9;
+}
+.about-page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.box {
+    width: 100%;
+    height: 100%;
+}
+.avatar {
+    background-image: url(../images/chichicat.jpg);
+    background-size: 350px;
+    height: 350px;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 35%;
+    top: calc(50% - 175px);
+}
+.self-introduce {
+    width: 100%;
+    position: relative;
+    top: calc(50% - 170px);
+    left: -10%;
+}
+.self-introduce p {
+    line-height: 1.8em;
+    font-size: 22px;
+}
+h1 {
+    font-size: 40px;
+}
+.exps {
+    height: 100vh;
+    width: 100%;
+    background-color: #E0E0E0;
+}
+.exps > div > div {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.exps h1 {
+    position: relative;
+    top: 15%;
+    width: 40%;
+    height: fit-content;
+}
+.exps ul {
+    position: relative;
+    top: 40%;
+    height: fit-content;
+    width: 60%;
+}
+.exps li {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    border-bottom:  #000 solid 2px;
+}
+.dot {
+    width: 1px;
+    height: 100%;
+    display: inline;
+}
+.dot::before {
+    content: "";
+    background-color: #7B7B7B;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 23.5%;
+}
+.dot::after {
+    content: "";
+    background-color: #7B7B7B;
+    width: 2px;
+    height: 100px;
+    position: absolute;
+    margin-top: 17%;
+    margin-left: 4.5px;
+    display: none; /*隱藏*/
+}
+.years {
+    font-weight: bold;
+    font-size: 24px;
+    padding-left: 10px;
+    padding-right: 30px;
+}
+.company {
+    font-size: 20px;
+    font-weight: bold;
+    color: #408080;
+    display: inline-block;
+    padding-right: 30px;
+}
+.company:hover {
+    color: #D26900;
+}
+.job-title {
+    font-size: 20px;
+}
+footer {
+    width: 100%;
+    background-color: #3C3C3C;
+}
+.footer-content {
+    padding: 20px 0;
+    color: #fff;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer-content > div {
+    padding: 5px 0;
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    left: 30%;
+}
+.footer-content > div > div {
+    display: inline-block;
+}
+.footer-content div i {
+    width: 35px;
+    text-align: center;
+}
+.footer-content div p {
+    display: inline-block;
+    padding-left: 10px;
+}
+.github a {
+    color: #fff;
+    padding: 1px;
+}
+.github a:hover {
+    background-color: #fff;
+    color: #000;
+}
